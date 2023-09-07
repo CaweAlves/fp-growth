@@ -1,0 +1,18 @@
+{
+    "name": "cawe/fp-growth",
+    "description": "fp-growth algorithm in PHP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cawe541",
+            "email": "contato@cawe.dev"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
