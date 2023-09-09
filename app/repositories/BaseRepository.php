@@ -11,7 +11,7 @@ class BaseRepository implements RepositoryInterface
     {
     }
 
-    public function find(int $id)
+    public function findById(int $id)
     {
     }
     public function findAll()
