@@ -24,7 +24,7 @@ class Connection
 
     }
 
-    public function connect(): void
+    public function connect(): PDO
     {
         if (!self::$connection) {
             self::$connection = new PDO("mysql:dbname=$this->database;host=$this->host;port=$this->port", $this->username, $this->password, [
@@ -32,6 +32,8 @@ class Connection
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
             ]);
         }
+
+        return self::$connection;
     }
 
 }
