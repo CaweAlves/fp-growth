@@ -2,13 +2,17 @@
 
 namespace app\repositories;
 
-use app\entitys\EntityInterface;
+use app\database\Connection;
+use app\entitys\Entity;
 
 class BaseRepository implements RepositoryInterface
 {
 
-    public function __construct(EntityInterface $entity)
+    protected string $tableName;
+
+    public function __construct(Entity $entity, protected Connection $connection)
     {
+        $entity->tableName ??= $this->tableName = printf('%ss', $entity->getClassName());
     }
 
     public function findById(int $id)
