@@ -2,7 +2,7 @@
 
 namespace app\entitys;
 
-class Product
+class Product implements EntityInterface
 {
     public function __construct(private int $id, private string $name)
     {
